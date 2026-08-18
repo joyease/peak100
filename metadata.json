@@ -1,0 +1,6 @@
+{
+  "name": "台灣小百岳完登地圖與榮譽獎狀",
+  "description": "輸入山友暱稱查詢小百岳完登紀錄、展示精美完登榮譽獎狀、台灣地圖點位與百岳名稱高亮清單",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
