@@ -43,6 +43,13 @@ export default function App() {
   const handleSelectHiker = (profile: HikerProfile) => {
     setCurrentProfile(profile);
     setCompletedPeakIds(new Set(profile.completedPeakIds));
+    try {
+      if (profile.email) {
+        localStorage.setItem(`peak100_user_${profile.email.toLowerCase()}`, JSON.stringify(profile));
+      }
+    } catch (e) {
+      // Ignore localStorage errors
+    }
     if (profile.completedPeakIds.length > 0) {
       setIsCertModalOpen(true);
     }
@@ -59,10 +66,18 @@ export default function App() {
       }
 
       if (currentProfile) {
-        setCurrentProfile({
+        const updated: HikerProfile = {
           ...currentProfile,
           completedPeakIds: Array.from(next)
-        });
+        };
+        setCurrentProfile(updated);
+        try {
+          if (updated.email) {
+            localStorage.setItem(`peak100_user_${updated.email.toLowerCase()}`, JSON.stringify(updated));
+          }
+        } catch (e) {
+          // Ignore
+        }
       }
       return next;
     });

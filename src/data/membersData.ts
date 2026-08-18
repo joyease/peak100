@@ -2,13 +2,49 @@ import { HikerProfile } from '../types';
 
 export const HIKER_ROSTER: HikerProfile[] = [
   {
-    nickname: 'Hermann',
-    email: 'hermann@gmail.com',
-    levelTitle: '小百岳全紀錄完登探險家',
-    certId: 'TW-HERMANN-2026-099',
+    nickname: '文華',
+    email: 'hermannhuang@gmail.com',
+    levelTitle: '小百岳高階縱走達人',
+    certId: 'TW-WENHUA-2026-073',
     finishDate: '2026-08-18',
-    motto: '追隨光與山的指引，完成百岳榮耀征程。',
-    completedPeakIds: Array.from({ length: 100 }, (_, i) => i + 1) // 100/100 全完登!
+    motto: '心懷謙卑，敬畏山林；用雙腳丈量台灣美麗山嶽。',
+    // 73 peaks completed
+    completedPeakIds: [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 37, 38, 39, 40,
+      41, 42, 43, 44, 46, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60,
+      61, 62, 63, 64, 67, 68, 72, 73, 74, 75, 76, 77, 78, 80, 82, 83, 94, 96, 98, 100
+    ]
+  },
+  {
+    nickname: '如娟',
+    email: 'ruchuan30@gmail.com',
+    levelTitle: '小百岳高階縱走達人',
+    certId: 'TW-RUCHUAN-2026-073',
+    finishDate: '2026-08-18',
+    motto: '攜手同心，走過台灣山林最美的脊樑。',
+    // 73 peaks completed
+    completedPeakIds: [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 37, 38, 39, 40,
+      41, 42, 43, 44, 46, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60,
+      61, 62, 63, 64, 67, 68, 72, 73, 74, 75, 76, 77, 78, 80, 82, 83, 94, 96, 98, 100
+    ]
+  },
+  {
+    nickname: 'Hermann',
+    email: 'hermanntalk@gmail.com',
+    levelTitle: '小百岳高階縱走達人',
+    certId: 'TW-HERMANN-2026-073',
+    finishDate: '2026-08-18',
+    motto: '心懷謙卑，敬畏山林；用雙腳丈量台灣美麗山嶽。',
+    // 73 peaks completed
+    completedPeakIds: [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 37, 38, 39, 40,
+      41, 42, 43, 44, 46, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60,
+      61, 62, 63, 64, 67, 68, 72, 73, 74, 75, 76, 77, 78, 80, 82, 83, 94, 96, 98, 100
+    ]
   },
   {
     nickname: 'Joyease',
@@ -44,33 +80,30 @@ export const HIKER_ROSTER: HikerProfile[] = [
     ]
   },
   {
-    nickname: '文華',
-    email: 'hermannhuang@gmail.com',
+    nickname: '山野旅人',
+    email: 'mountain.traveler@gmail.com',
     levelTitle: '小百岳進階健行勇者',
     certId: 'TW-100HILLS-2026-105',
     finishDate: '2026-04-08',
-    motto: '遠離塵囂，走入山林最純粹的平靜。',
-    // 73 peaks completed
+    motto: '遠離塵囂，走入山林寻找最純粹的平靜。',
+    // 58 peaks completed
     completedPeakIds: [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-      22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 37, 38, 39, 40,
-      41, 42, 43, 44, 46, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60,
-      61, 62, 63, 64, 67, 68, 72, 73, 74, 75, 76, 77, 78, 80, 82, 83, 94, 96, 98, 100
+      21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+      41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58
     ]
   },
   {
-    nickname: '如娟',
-    email: 'ruchuan30@gmail.com',
+    nickname: '百岳阿梅',
+    email: 'may.hike@gmail.com',
     levelTitle: '小百岳精銳登山客',
     certId: 'TW-100HILLS-2026-188',
     finishDate: '2026-03-15',
     motto: '山不在高，有心則達。小百岳也是滿滿台灣情。',
-    // 73 peaks completed
+    // 40 peaks completed
     completedPeakIds: [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-      22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 37, 38, 39, 40,
-      41, 42, 43, 44, 46, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60,
-      61, 62, 63, 64, 67, 68, 72, 73, 74, 75, 76, 77, 78, 80, 82, 83, 94, 96, 98, 100
+      21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
     ]
   },
   {
@@ -95,22 +128,53 @@ export const HIKER_ROSTER: HikerProfile[] = [
 ];
 
 export function findHikerByGmail(input: string): HikerProfile | null {
-  if (!input.trim()) return null;
+  if (!input || !input.trim()) return null;
   const clean = input.trim().toLowerCase();
-  
-  // 1. Direct email match or without @gmail.com prefix match
-  const found = HIKER_ROSTER.find((h) => {
+  const inputUser = clean.includes('@') ? clean.split('@')[0] : clean;
+  const inputEmail = clean.includes('@') ? clean : `${clean}@gmail.com`;
+
+  // 1. Direct match in roster first (official data source)
+  const rosterMatch = HIKER_ROSTER.find((h) => {
     const hEmail = h.email.toLowerCase();
     const hUser = hEmail.split('@')[0];
-    const inputUser = clean.includes('@') ? clean.split('@')[0] : clean;
+    const hNick = h.nickname.toLowerCase();
     
     return (
       hEmail === clean ||
-      hEmail === `${clean}@gmail.com` ||
+      hEmail === inputEmail ||
       hUser === inputUser ||
-      h.nickname.toLowerCase() === clean
+      hNick === clean
     );
   });
-  
-  return found || null;
+
+  if (rosterMatch) {
+    // Check if user made additional local custom checkmarks on top of roster
+    try {
+      const saved = localStorage.getItem(`peak100_user_${rosterMatch.email.toLowerCase()}`);
+      if (saved) {
+        const parsed = JSON.parse(saved) as HikerProfile;
+        if (parsed && Array.isArray(parsed.completedPeakIds) && parsed.completedPeakIds.length >= rosterMatch.completedPeakIds.length) {
+          return { ...rosterMatch, ...parsed };
+        }
+      }
+    } catch (e) {
+      // Ignore
+    }
+    return rosterMatch;
+  }
+
+  // 2. Check localStorage for non-roster custom saved record
+  try {
+    const saved = localStorage.getItem(`peak100_user_${inputEmail}`) || localStorage.getItem(`peak100_user_${inputUser}`);
+    if (saved) {
+      const parsed = JSON.parse(saved) as HikerProfile;
+      if (parsed && Array.isArray(parsed.completedPeakIds)) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    // Ignore localStorage parse errors
+  }
+
+  return null;
 }

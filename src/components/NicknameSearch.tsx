@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, UserCheck, Award, X, HelpCircle, Mail } from 'lucide-react';
+import { Search, UserCheck, Award, X, HelpCircle, Mail, UserPlus } from 'lucide-react';
 import { findHikerByGmail, HIKER_ROSTER } from '../data/membersData';
 import { HikerProfile } from '../types';
 
@@ -18,7 +18,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [searchFeedback, setSearchFeedback] = useState<{
-    type: 'success' | 'notFound' | 'idle';
+    type: 'success' | 'newProfile' | 'idle';
     message: string;
   }>({ type: 'idle', message: '' });
 
@@ -42,24 +42,26 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
         message: `查詢成功！山友暱稱「${matched.nickname}」，已載入 ${matched.completedPeakIds.length} 座完登足跡與榮譽獎狀。`
       });
     } else {
-      // If a custom Gmail is entered, derive a clean nickname from the email prefix
+      // If a custom/unregistered Gmail is entered:
+      // Derive a clean default nickname from the email prefix, start with 0 peaks
       const emailPrefix = query.includes('@') ? query.split('@')[0] : query;
       const cleanNickname = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slice(1);
       const fullEmail = query.includes('@') ? query : `${query}@gmail.com`;
 
-      const customProfile: HikerProfile = {
+      const newProfile: HikerProfile = {
         nickname: cleanNickname,
         email: fullEmail,
         levelTitle: '小百岳自主攀登勇者',
         certId: `TW-CUSTOM-${Math.floor(1000 + Math.random() * 9000)}`,
         finishDate: new Date().toISOString().split('T')[0],
         motto: '山海無垠，用雙腳走出屬於自己的小百岳之路。',
-        completedPeakIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] // Sample 15 peaks for new profile
+        completedPeakIds: [] // Start with 0 completed peaks
       };
-      onSelectHiker(customProfile);
+
+      onSelectHiker(newProfile);
       setSearchFeedback({
-        type: 'notFound',
-        message: `已為「${cleanNickname}」建立專屬紀錄面板，可自由勾選登頂山峰與產生獎狀！`
+        type: 'newProfile',
+        message: `名單尚無預設資料，已為「${cleanNickname}」建立專屬紀錄面板（目前 0/100 座），可在下方自由勾選登頂山峰！`
       });
     }
   };
@@ -129,7 +131,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
                 {searchFeedback.type === 'success' ? (
                   <UserCheck className="w-4 h-4 text-[#2D5A27] shrink-0" />
                 ) : (
-                  <HelpCircle className="w-4 h-4 text-amber-600 shrink-0" />
+                  <UserPlus className="w-4 h-4 text-amber-600 shrink-0" />
                 )}
                 <span>{searchFeedback.message}</span>
               </div>
