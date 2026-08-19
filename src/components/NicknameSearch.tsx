@@ -141,7 +141,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
                   className="text-xs font-bold text-[#2D5A27] hover:text-[#1B3A18] underline shrink-0 cursor-pointer flex items-center gap-1"
                 >
                   <Award className="w-3.5 h-3.5" />
-                  查看榮譽獎狀
+                  開獎狀
                 </button>
               )}
             </div>

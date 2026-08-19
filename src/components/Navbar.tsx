@@ -31,14 +31,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center space-x-2">
               <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900">
-                台灣小百岳成就地圖
+                小百岳完登圖
               </span>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#2D5A27]/10 text-[#2D5A27] border border-[#2D5A27]/20 font-bold uppercase tracking-wider">
-                100 Total Summits
+                Peaks 100
               </span>
             </div>
             <p className="text-xs text-slate-500 font-medium hidden sm:block">
-              Taiwan 100 Small Peaks Achievement Tracker
+              Taiwan Small Peaks 100
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             title={activeNickname ? `查看 ${activeNickname} 的榮譽獎狀` : '請先輸入暱稱查詢或登入'}
           >
             <Award className={`w-4 h-4 ${hasCertificate ? 'text-yellow-300' : 'text-slate-400'}`} />
-            <span>{hasCertificate ? '查看榮譽獎狀' : '產生獎狀'}</span>
+            <span>{hasCertificate ? '開獎狀' : '產生獎狀'}</span>
             {activeNickname && (
               <span className="hidden lg:inline-block max-w-[80px] truncate text-[11px] px-1.5 py-0.2 bg-black/20 text-white rounded">
                 {activeNickname}

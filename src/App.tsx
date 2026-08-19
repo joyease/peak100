@@ -95,29 +95,6 @@ export default function App() {
     setCompletedPeakIds(new Set());
   };
 
-  // Bulk 100 complete
-  const handleBulkCompleteAll = () => {
-    const allIds = TAIWAN_SMALL_100_PEAKS.map((p) => p.id);
-    setCompletedPeakIds(new Set(allIds));
-    if (currentProfile) {
-      setCurrentProfile({
-        ...currentProfile,
-        completedPeakIds: allIds
-      });
-    }
-  };
-
-  // Bulk clear
-  const handleBulkClearAll = () => {
-    setCompletedPeakIds(new Set());
-    if (currentProfile) {
-      setCurrentProfile({
-        ...currentProfile,
-        completedPeakIds: []
-      });
-    }
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -141,15 +118,15 @@ export default function App() {
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1B3A18] text-yellow-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Compass className="w-3.5 h-3.5" />
-              <span>Taiwan 100 Small Peaks Achievement System</span>
+              <span>Taiwan Small Peaks 100</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-              台灣小百岳成就地圖與榮譽認證
+              小百岳完登地圖與獎狀
             </h1>
 
             <p className="mt-2 text-xs sm:text-sm text-emerald-100 font-medium leading-relaxed max-w-2xl">
-              輸入山友 Gmail 即時核對完登成就，畫面與榮譽獎狀皆以山友專屬暱稱呈現；下方提供 100 座小百岳高密度清單與分區明細。
+              輸入 Gmail 即可查詢山友的完登紀錄與獎狀，並可查看小百岳地圖資訊
             </p>
           </div>
 
@@ -185,8 +162,6 @@ export default function App() {
           selectedPeak={selectedPeak}
           onSelectPeak={handleOpenPeakDetail}
           onToggleComplete={handleToggleComplete}
-          onBulkCompleteAll={handleBulkCompleteAll}
-          onBulkClearAll={handleBulkClearAll}
         />
 
       </main>

@@ -41,7 +41,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             <div className="w-6 h-6 rounded-full bg-[#2D5A27] text-white flex items-center justify-center">
               <Award className="w-3.5 h-3.5 text-yellow-300" />
             </div>
-            <span className="font-bold text-sm tracking-tight">小百岳完登榮譽獎狀 • Certificate</span>
+            <span className="font-bold text-sm tracking-tight">小百岳完登獎狀 • Certificate</span>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -81,7 +81,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
                 Certificate of Achievement
               </h2>
               <h3 className="text-2xl sm:text-4xl font-black text-slate-800 mb-3 tracking-tight">
-                小百岳完登榮譽獎狀
+                小百岳完登獎狀
               </h3>
               <div className="w-20 h-0.5 bg-[#8B7355] mx-auto mb-6"></div>
             </div>
@@ -89,7 +89,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             {/* Certificate Main Text */}
             <div className="text-center space-y-4 my-4 relative z-10 font-sans">
               <p className="text-slate-500 text-sm font-medium">
-                茲證明 台灣登山勇士
+                茲證明 登山夥伴
               </p>
 
               {/* Hiker Nickname Box */}
@@ -97,24 +97,24 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
                 <span className="text-2xl sm:text-4xl font-black tracking-wide text-[#2D5A27]">
                   {profile.nickname}
                 </span>
-                <span className="text-sm font-bold text-slate-500 ml-2">閣下</span>
+                <span className="text-sm font-bold text-slate-500 ml-2">君</span>
               </div>
 
               {/* Achievement description */}
               <div className="max-w-md mx-auto text-slate-600 text-sm sm:text-base leading-relaxed pt-2">
                 <p>
-                  已成功登頂踏訪{' '}
+                  已完成{' '}
                   <span className="text-2xl font-black text-[#2D5A27] font-mono mx-1">
                     {completedCount}
                   </span>{' '}
-                  座台灣小百岳（完成率{' '}
+                  座台灣小百岳（
                   <span className="font-extrabold text-[#2D5A27]">
                     {Math.round((completedCount / 100) * 100)}%
                   </span>
                   ）
                 </p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-2">
-                  特頒此狀以資表彰其熱愛台灣山林之堅毅精神與卓越成就。
+                  特頒此狀以資表彰，並期共同護愛山林。
                 </p>
                 {profile.motto && (
                   <p className="text-xs text-slate-400 italic mt-3 pt-2 border-t border-slate-100 font-serif">

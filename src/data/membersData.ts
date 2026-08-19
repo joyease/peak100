@@ -7,7 +7,7 @@ export const HIKER_ROSTER: HikerProfile[] = [
     levelTitle: '小百岳高階縱走達人',
     certId: 'TW-WENHUA-2026-073',
     finishDate: '2026-08-18',
-    motto: '心懷謙卑，敬畏山林；用雙腳丈量台灣美麗山嶽。',
+    motto: '心懷謙卑，護愛山林',
     // 73 peaks completed
     completedPeakIds: [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -37,7 +37,7 @@ export const HIKER_ROSTER: HikerProfile[] = [
     levelTitle: '小百岳高階縱走達人',
     certId: 'TW-HERMANN-2026-073',
     finishDate: '2026-08-18',
-    motto: '心懷謙卑，敬畏山林；用雙腳丈量台灣美麗山嶽。',
+    motto: '心懷謙卑，護愛山林',
     // 73 peaks completed
     completedPeakIds: [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,

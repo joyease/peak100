@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { SmallPeak, Region } from '../types';
-import { Search, CheckCircle2, Circle, Mountain, SlidersHorizontal, ArrowUpDown, Sparkles, Check, MapPin, Grid } from 'lucide-react';
+import { Search, CheckCircle2, Circle, Mountain, SlidersHorizontal, ArrowUpDown, Check, MapPin, Grid } from 'lucide-react';
 
 interface PeaksListProps {
   peaks: SmallPeak[];
@@ -8,8 +8,6 @@ interface PeaksListProps {
   selectedPeak: SmallPeak | null;
   onSelectPeak: (peak: SmallPeak) => void;
   onToggleComplete: (peakId: number) => void;
-  onBulkCompleteAll?: () => void;
-  onBulkClearAll?: () => void;
 }
 
 export const PeaksList: React.FC<PeaksListProps> = ({
@@ -17,9 +15,7 @@ export const PeaksList: React.FC<PeaksListProps> = ({
   completedPeakIds,
   selectedPeak,
   onSelectPeak,
-  onToggleComplete,
-  onBulkCompleteAll,
-  onBulkClearAll
+  onToggleComplete
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState<Region | '全部'>('全部');
@@ -74,18 +70,18 @@ export const PeaksList: React.FC<PeaksListProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest">
-              百大名單明細表 • 100 Small Peaks Roster
+              小百岳完登明細
             </h4>
             <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#2D5A27] text-white font-bold">
               {completedPeakIds.size} / 100
             </span>
           </div>
           <p className="text-xs text-slate-500 font-medium mt-1">
-            小百岳 100 座全紀錄：已登完以深綠黑邊突顯，未完成以柔和灰標顯示；點選可查看地標或切換登頂。
+            已完成以深綠顯示，未完成以灰標顯示；點選可查看資訊
           </p>
         </div>
 
-        {/* High Density Status Indicator & Quick Actions */}
+        {/* High Density Status Indicator */}
         <div className="flex flex-wrap items-center gap-3 text-xs">
           <div className="flex items-center gap-4 text-[10px] font-bold bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
             <div className="flex items-center gap-1.5">
@@ -97,24 +93,6 @@ export const PeaksList: React.FC<PeaksListProps> = ({
               <span className="text-slate-400">未完成 ({100 - completedPeakIds.size})</span>
             </div>
           </div>
-
-          {onBulkCompleteAll && (
-            <button
-              onClick={onBulkCompleteAll}
-              className="px-3 py-1.5 bg-[#2D5A27] hover:bg-[#1B3A18] text-white font-bold rounded-xl shadow-xs transition active:scale-95 flex items-center gap-1 text-xs cursor-pointer"
-            >
-              <Sparkles className="w-3 h-3 text-yellow-300" />
-              <span>全選完登 (100)</span>
-            </button>
-          )}
-          {onBulkClearAll && (
-            <button
-              onClick={onBulkClearAll}
-              className="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl transition text-xs font-bold cursor-pointer"
-            >
-              清空
-            </button>
-          )}
         </div>
       </div>
 
