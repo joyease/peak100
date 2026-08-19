@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, UserCheck, Award, X, HelpCircle, Mail, UserPlus } from 'lucide-react';
+import { Search, UserCheck, Award, X, HelpCircle, Mail, UserPlus, MapPin, ExternalLink } from 'lucide-react';
 import { findHikerByGmail, HIKER_ROSTER } from '../data/membersData';
 import { HikerProfile } from '../types';
 
@@ -171,21 +171,19 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5 shrink-0">
-              <button
-                id="view-cert-quick-btn"
-                onClick={onOpenCertificate}
-                className="px-3 py-1.5 bg-[#2D5A27] hover:bg-[#1B3A18] text-white text-xs font-bold rounded-xl shadow-xs transition active:scale-95 flex items-center gap-1 cursor-pointer"
+            <div className="shrink-0">
+              <a
+                id="in-app-checkin-btn"
+                href="https://joyease.github.io/mymap/peak100.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 sm:py-3 bg-[#2D5A27] hover:bg-[#1B3A18] text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer border border-[#1B3A18]"
+                title="前往 In-App 打卡地圖 (https://joyease.github.io/mymap/peak100.html)"
               >
-                <Award className="w-3.5 h-3.5 text-yellow-300" />
-                <span>開獎狀</span>
-              </button>
-              <button
-                onClick={onResetToDefault}
-                className="text-[11px] text-slate-400 hover:text-slate-600 underline text-center cursor-pointer"
-              >
-                重設
-              </button>
+                <MapPin className="w-4 h-4 text-yellow-300 shrink-0" />
+                <span className="whitespace-nowrap">In-App打卡</span>
+                <ExternalLink className="w-3.5 h-3.5 text-white/80 shrink-0" />
+              </a>
             </div>
           </div>
         ) : null}
