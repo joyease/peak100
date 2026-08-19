@@ -111,7 +111,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
             <button
               id="search-gmail-btn"
               type="submit"
-              className="bg-[#2D5A27] hover:bg-[#1B3A18] text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-md active:scale-95 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
+              className="bg-[#D9531E] hover:bg-[#B8400C] text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-md active:scale-95 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <Search className="w-4 h-4" />
               <span>查詢</span>
@@ -177,10 +177,10 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
                 href="https://joyease.github.io/mymap/peak100.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2.5 sm:py-3 bg-[#2D5A27] hover:bg-[#1B3A18] text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer border border-[#1B3A18]"
+                className="px-4 py-2.5 sm:py-3 bg-[#D9531E] hover:bg-[#B8400C] text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer border border-[#B8400C]"
                 title="前往 In-App 打卡地圖 (https://joyease.github.io/mymap/peak100.html)"
               >
-                <MapPin className="w-4 h-4 text-yellow-300 shrink-0" />
+                <MapPin className="w-4 h-4 text-amber-200 shrink-0" />
                 <span className="whitespace-nowrap">In-App打卡</span>
                 <ExternalLink className="w-3.5 h-3.5 text-white/80 shrink-0" />
               </a>
