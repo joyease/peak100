@@ -77,7 +77,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
               className="text-xs font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1.5"
             >
               <Mail className="w-3.5 h-3.5 text-[#2D5A27]" />
-              <span>Gmail 查詢 • 查詢完登紀錄與榮譽證書</span>
+              <span>請輸入 Gmail 查詢， 查詢證書與地圖</span>
             </label>
             <span className="text-[11px] text-slate-400 font-medium">
               輸入 Gmail，畫面與證書將顯示山友暱稱
@@ -91,7 +91,7 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="請輸入 Gmail（例如：hermanntalk@gmail.com、joyease@gmail.com）"
+                placeholder="請輸入 Gmail 查詢， 查詢證書與地圖"
                 className="w-full pl-4 pr-9 py-2.5 bg-transparent font-medium text-slate-800 text-sm placeholder:text-slate-400 outline-none"
               />
               {inputValue && (
@@ -174,11 +174,11 @@ export const NicknameSearch: React.FC<NicknameSearchProps> = ({
             <div className="shrink-0">
               <a
                 id="in-app-checkin-btn"
-                href="https://joyease.github.io/mymap/peak100.html"
+                href="https://joyease.github.io/mymap/260820peak100.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2.5 sm:py-3 bg-[#D9531E] hover:bg-[#B8400C] text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer border border-[#B8400C]"
-                title="前往 In-App 打卡地圖 (https://joyease.github.io/mymap/peak100.html)"
+                title="前往 In-App 打卡地圖 (https://joyease.github.io/mymap/260820peak100.html)"
               >
                 <MapPin className="w-4 h-4 text-amber-200 shrink-0" />
                 <span className="whitespace-nowrap">In-App打卡</span>
