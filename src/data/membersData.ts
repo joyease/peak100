@@ -3,7 +3,7 @@ import { HikerProfile } from '../types';
 export const HIKER_ROSTER: HikerProfile[] = [
   {
     nickname: '文華',
-    email: 'hermannhuang@gmail.com',
+    email: 'hermann@gmail.com',
     levelTitle: '小百岳高階縱走達人',
     certId: 'TW-WENHUA-2026-073',
     finishDate: '2026-08-18',
@@ -33,7 +33,7 @@ export const HIKER_ROSTER: HikerProfile[] = [
   },
   {
     nickname: 'Hermann',
-    email: 'hermanntalk@gmail.com',
+    email: 'hermannhuang@gmail.com',
     levelTitle: '小百岳高階縱走達人',
     certId: 'TW-HERMANN-2026-073',
     finishDate: '2026-08-18',
@@ -47,8 +47,8 @@ export const HIKER_ROSTER: HikerProfile[] = [
     ]
   },
   {
-    nickname: 'Joyease',
-    email: 'joyease@gmail.com',
+    nickname: '高手',
+    email: 'all@gmail.com',
     levelTitle: '小百岳榮譽完登百岳大師',
     certId: 'TW-JOY-2026-001',
     finishDate: '2026-06-18',
